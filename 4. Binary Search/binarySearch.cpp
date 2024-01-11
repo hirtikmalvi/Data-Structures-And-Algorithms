@@ -5,7 +5,8 @@ using namespace std;
 int binarySearch(int arr[], int size, int key)
 {
     int start = 0, end = size - 1;
-    int mid = (start + end) / 2;
+    // int mid = (start + end) / 2; // Leads to memory Overflow.
+    int mid = start + (end - start) / 2; // Optimised solution and prevents from memory Overflow.
 
     while (start <= end)
     {
@@ -19,7 +20,7 @@ int binarySearch(int arr[], int size, int key)
         {
             start = mid + 1;
         }
-        mid = (start + end) / 2;
+        mid = start + (end - start) / 2;
     }
     return -1;
 }

@@ -4,14 +4,14 @@ using namespace std;
 void reverseArray(int arr[], int size)
 {
     int start = 0, end = size - 1;
-    for (int start = 0; start <= end; start++, end--)
+    while (start <= end)
     {
-        swap(arr[start], arr[end]);
+        swap(arr[start++], arr[end--]);
     }
     cout << "Reversed Array: ";
     for (int i = 0; i < size; i++)
     {
-        cout << arr[i]<<" ";
+        cout << arr[i] << " ";
     }
 }
 

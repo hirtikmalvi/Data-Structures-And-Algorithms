@@ -3,8 +3,6 @@ Problem statement: Find Pair Sum.
 You are given an integer array 'ARR' of size 'N' and an integer 'S'. Your task is to return the list of all pairs of elements such that each sum of elements of each pair equals 'S'.
 
 Note:
-
-
 Explain
 Each pair should be sorted i.e the first value should be less than or equals to the second value. 
 
