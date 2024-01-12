@@ -23,7 +23,7 @@ int firstPosition(int arr[], int size, int key)
     int start = 0, end = size - 1, ans = -1; // At starting ans = -1, because if not found element then it will return -1.
     int mid = start + (end - start) / 2;
     while (start <= end)
-    {
+    { 
         if (key == arr[mid])
         {
             ans = mid;     // Storing the mid in ans. the reason is there is also possiblilties of getting the same element in left part. Suppose array is 1 3 3 5 6 first our mid will be at index 2. but there is also another 3 beside the index 2.
