@@ -1,15 +1,16 @@
+// Uncomment for the function.
 /*
 Problem statement: Find Pair Sum.
 You are given an integer array 'ARR' of size 'N' and an integer 'S'. Your task is to return the list of all pairs of elements such that each sum of elements of each pair equals 'S'.
 
 Note:
 Explain
-Each pair should be sorted i.e the first value should be less than or equals to the second value. 
+Each pair should be sorted i.e the first value should be less than or equals to the second value.
 
 Return the list of pairs sorted in non-decreasing order of their first value. In case if two pairs have the same first value, the pair with a smaller second value should come first.
 */
 
-/* //Uncomment for the function.
+/*
 #include <bits/stdc++.h>
 vector<vector<int>> pairSum(vector<int> &arr, int s){
 

@@ -37,10 +37,11 @@ double sqrtWithMorePrecision(int n, int precesion, int sqrtInt)
 {
     double factor = 1;
     double ans = sqrtInt;
-
+    // Precision means how many digits you want after the decimal point.
     for (int i = 0; i < precesion; i++)
     {
-        factor = factor / 10;
+        factor = factor / 10; // Every time it gets 0.1, 0.01, 0.001 ....
+        // adding factor to the ans after increasing it.
         for (double j = ans; j * j < n; j += factor)
         {
             ans = j;
