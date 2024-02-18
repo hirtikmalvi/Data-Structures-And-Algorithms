@@ -29,19 +29,33 @@ int modularExponentiation(int x, int n, int m) {
 }
 */
 
-// It is simpe code for getting x^n with TC = log(n).
-int modularExponentiation(int x, int n)
-{
-    int res = 1;
+#include <iostream>
+using namespace std;
 
-    while (n > 0)
+// It is simpe code for getting a^b with TC = log(n). Using Recursion
+int modularExponentiation(int a, int b)
+{
+    if (b == 0)
+        return 1;
+    if (b == 1)
+        return a;
+    int ans = modularExponentiation(a, b / 2);
+
+    if (b % 2 == 0)
     {
-        if (n & 1)
-        {
-            res = (res * x);
-        }
-        x = x * x;
-        n = n >> 1;
+        return ans * ans;
     }
-    return res;
+    else
+    {
+        return a * ans * ans;
+    }
+}
+
+int main()
+{
+    int a, b; // a^b
+    cout << "Enter a and b: ";
+    cin >> a >> b;
+
+    cout << a << "^" << b << " = " << modularExponentiation(a, b);
 }

@@ -31,7 +31,6 @@ We are getting the minimum in the last case. min(191,157,113)
 
 Hence answer is ‘113’.
 */
-
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -63,6 +62,26 @@ bool isPossible(vector<int> &arr, int n, int m, int mid)
     return true;
 }
 
+int bSBookAllo(vector<int> &arr, int start, int end, int &ans, int n, int m)
+{
+    int mid = start + (end - start) / 2;
+
+    if (start > end)
+    {
+        return ans;
+    }
+
+    if (isPossible(arr, n, m, mid))
+    {
+        ans = mid;
+        return bSBookAllo(arr, start, mid - 1, ans, n, m);
+    }
+    else
+    {
+        return bSBookAllo(arr, mid + 1, end, ans, n, m);
+    }
+}
+
 int findPages(vector<int> &arr, int n, int m)
 {
 
@@ -80,24 +99,9 @@ int findPages(vector<int> &arr, int n, int m)
     }
 
     int end = sum;
-    int ans = -1;   
+    int ans = -1;
 
-    int mid = start + (end - start) / 2;
-
-    while (start <= end)
-    {
-        if (isPossible(arr, n, m, mid))
-        {
-            ans = mid;
-            end = mid - 1;
-        }
-        else
-        {
-            start = mid + 1;
-        }
-        mid = start + (end - start) / 2;
-    }
-    return ans;
+    return bSBookAllo(arr, start, end, ans, n, m);
 }
 
 // We take inputs as number of books n(size of array), no of pages arr[i](array elements) and no of students m.
