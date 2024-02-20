@@ -19,6 +19,7 @@ Input: digits = "2"
 Output: ["a","b","c"]
 */
 
+// UNCOMMENT
 /*
 class Solution {
 
@@ -33,6 +34,8 @@ void solutionletterCombinations(string digits,int index,string output,vector<str
     int indexOfMapping = digits[index] - '0'; // get the number in Integer and that will be index to the mapping string
     string mappedString = mapping[indexOfMapping]; //Get the string that is mapped with each digit. Ex. for 2 there is mapped string is "abc"
 
+    //This for loop will execute for the first digit's mapped each characters. and rest will be taken care by recursion.
+    //After first func call, for all 1st digit's mapped chars loop will run and after its termination the function will return answer.
     for(int i=0;i < mappedString.length();i++){ //Take each character from that string
         output.push_back(mappedString[i]); //store it to output
         solutionletterCombinations(digits, index + 1, output, ans, mapping); //Call func. for next index

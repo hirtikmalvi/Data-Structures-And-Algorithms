@@ -1,6 +1,8 @@
 // Leetcode 78: Subsets
 // Love Babbar: Lecture 37
 
+// Subset and Subsequences of string both are same problem(Conding Ninja)
+
 // Suppose you're given a = {1,2,3}
 // Then {1} is subset of {1,2,3},  {2} is subset of {1,2,3}, {2,3} is subset of {1,2,3} and same {}, {3}, {1,2}, {1,3} and {1,2,3} are also subsets of {1,2,3} | No. of subsets : 2^no.of elements = 8
 // Set of all the subsets is called POWER SET. Power Set = {{},{1}{2},{3},{1,2},{1,3},{2,3},{1,2,3}}
