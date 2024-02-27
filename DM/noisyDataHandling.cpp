@@ -3,7 +3,6 @@
 #include <vector>
 #include <ctime>
 #include <algorithm>
-
 using namespace std;
 
 void printArr(const vector<vector<double>> &bins, int n, const vector<int> &binsColSize)
@@ -58,7 +57,6 @@ void equalDepthBinning(vector<vector<double>> &Bins, vector<double> dataArr, int
 
 void byMean(vector<vector<double>> Bins, int n, vector<int> &BinsColSize)
 {
-
     vector<double> meanSum;
     for (int i = 0; i < n; i++) // For Row (No of equalDepthBins)
     {
@@ -94,7 +92,6 @@ void byMean(vector<vector<double>> Bins, int n, vector<int> &BinsColSize)
 
 void byMedian(vector<vector<double>> Bins, int n, vector<int> &BinsColSize)
 {
-
     vector<double> median;
     for (int i = 0; i < n; i++) // For Row (No of equalDepthBins)
     {
@@ -183,27 +180,6 @@ void equalWidthBinning(vector<vector<double>> &equalWidthBins, const vector<doub
 int main()
 {
     vector<double> dataArr(20);
-    // vector<double> dataArr = {
-    //     11,
-    //     13,
-    //     16,
-    //     17,
-    //     19,
-    //     22,
-    //     24,
-    //     30,
-    //     37,
-    //     40,
-    //     49,
-    //     51,
-    //     61,
-    //     62,
-    //     64,
-    //     69,
-    //     74,
-    //     79,
-    //     81,
-    //     99};
     vector<vector<double>> equalDepthBins;
     vector<vector<double>> equalWidtbins;
     vector<int> equalWidthBinsColSize;
