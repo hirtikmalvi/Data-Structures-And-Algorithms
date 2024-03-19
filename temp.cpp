@@ -1,37 +1,24 @@
 #include <iostream>
 using namespace std;
 
-class Hero
+class Summation
 {
+private:
+    // private variables
+    int a, b, c;
+
 public:
-    int health = 5;
-
-    Hero(int health)
+    void sum(int x, int y)
     {
-        (*this).health = health;
-        cout << "Inside Constructor: " << endl;
-        cout << "Address of this " << this << endl;
-        cout << "Exited Constructor: " << endl;
-    }
-
-    Hero(Hero &temp)
-    {
-        cout << "Inside Copy Constructor: " << &temp << endl;
-        this->health = temp.health;
-    }
-
-    void setHealth(int health)
-    {
-        cout << "Address of this " << this << endl;
-        this->health = health;
+        a = x;
+        b = y;
+        c = a + b;
+        cout << "Sum of the two number is : " << c << endl;
     }
 };
-
 int main()
 {
-    Hero hirtik(10);
-    Hero hirtik2 = hirtik;
-    cout << "hirtik2 health " << hirtik2.health << endl;
-    cout << "Address of hirtik obj " << &hirtik << endl;
-    cout << "Address of hirtik2 obj " << &hirtik2 << endl;
+    Summation s;
+    s.sum(5, 4);
+    return 0;
 }

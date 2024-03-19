@@ -28,7 +28,7 @@ int onesComplement(int n)
 
 int twosComplement(int n)
 {
-    return 
+    // return 
 }
 
 int main()
